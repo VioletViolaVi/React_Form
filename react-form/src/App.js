@@ -37,8 +37,10 @@ function App() {
   };
 
   return (
-    <>
-      <form onSubmit={submitForm}>
+    <div className="form-center">
+      <h1 className="title">React Form</h1>
+
+      <form onSubmit={submitForm} className="form-bg">
         <input
           required
           type="text"
@@ -79,11 +81,12 @@ function App() {
           checked={formData.subscribe}
           onChange={handleData}
         />
+        <label htmlFor="subscribe">Subscribe to our newsletter</label>
         <br />
 
-        <button>Submit</button>
+        <button className="submit-btn">Submit</button>
       </form>
-    </>
+    </div>
   );
 }
 
