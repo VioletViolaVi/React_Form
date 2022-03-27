@@ -26,14 +26,12 @@ function App() {
     event.preventDefault();
     // shows data
     console.log(formData);
+    // capitalizes 1st letter in 1st name
+    const firstName =
+      formData.firstName.charAt(0).toUpperCase() + formData.firstName.slice(1);
     // message for subscribing
-    formData.subscribe &&
-      console.log(
-        `Thanks for subscribing ${
-          formData.firstName.charAt(0).toUpperCase() +
-          formData.firstName.slice(1)
-        }!`
-      );
+    const thankYouSentence = `Thanks ${firstName} for subscribing!`;
+    formData.subscribe && console.log(thankYouSentence);
   };
 
   return (
